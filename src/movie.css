@@ -1,0 +1,50 @@
+
+.poster-container {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease-in;
+}
+
+.poster-container:hover {
+  transform: translateY(-10px);
+}
+
+
+.heart-icon {
+  position: absolute;
+  bottom: 55px;
+  margin-right:55px;
+  right: 10px;
+  color: red;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.text{
+  color: white;
+}
+
+.poster-container:hover .heart-icon {
+  opacity: 1;
+}
+
+.trash-icon{
+
+  position: absolute;
+  bottom: 25px;
+  margin-right:25px;
+  right: 10px;
+  color: red;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+}
+.text1{
+  color: white;
+}
+
+.poster-container:hover .trash-icon {
+  opacity: 1;
+}
