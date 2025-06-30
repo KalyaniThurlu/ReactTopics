@@ -29,6 +29,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import PostApi from "./PostApi1";
 import PostApi2 from "./DailyPractice";
 import PutApi2 from "./DailyPractice";
+import Bmi from "./bmi";
 
 // const App=()=>{
 //   return(
@@ -53,6 +54,6 @@ import PutApi2 from "./DailyPractice";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <PutApi2/>
+    <Bmi/>
   </React.StrictMode>
 );
