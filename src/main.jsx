@@ -30,6 +30,8 @@ import PostApi from "./PostApi1";
 import PostApi2 from "./DailyPractice";
 import PutApi2 from "./DailyPractice";
 import Bmi from "./bmi";
+import GetApi1 from "./DailyPractice";
+import DeleteApi1 from "./DailyPractice";
 
 // const App=()=>{
 //   return(
@@ -54,6 +56,6 @@ import Bmi from "./bmi";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Bmi/>
+    <DeleteApi1/>
   </React.StrictMode>
 );
