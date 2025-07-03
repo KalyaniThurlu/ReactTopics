@@ -125,47 +125,17 @@ import { useEffect, useState } from "react"
 // }
 // export default GetApi1
 
-const DeleteApi1 = () => {
-  const [id, setId] = useState("");
-  const [msg, setMsg] = useState("");
-
-  const deleteData = () => {
-    if (!id) {
-      setMsg("Please provide an ID");
-      return;
-    }
-
-    axios
-      .delete(`https://api.restful-api.dev/objects/${id}`)
-      .then((res) => {
-        if (res.status === 200) {
-          setMsg("Data deleted successfully!");
-          setId(""); // Clear the input field after deletion
-        } else {
-          setMsg(`Failed to delete. Status: ${res.status}`);
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        setMsg("An error occurred while deleting.");
-      });
-  };
-
-  return (
+const PostApi1=()=>{
+  const [name,setName]=useState("")
+  const [year,setYear]=useState("")
+  const [price,setPrice]=useState("")
+  const [cpu,setCpu]=useState("")
+  const [hardDisj,setHardDisk]=useState("")
+  const [msg,setMsg]=useState("")
+  return(
     <div>
-      <h2>{msg}</h2>
-      <label>
-        ID:{" "}
-        <input
-          type="text"
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-        />
-      </label>
-      <br />
-      <button onClick={deleteData}>Delete API</button>
+      <h2>hello</h2>
     </div>
-  );
-};
-
-export default DeleteApi1;
+  )
+}
+export default PostApi1

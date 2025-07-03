@@ -26,13 +26,9 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import PostApi from "./PostApi1";
-import PostApi2 from "./DailyPractice";
-import PutApi2 from "./DailyPractice";
-import Bmi from "./bmi";
-import GetApi1 from "./DailyPractice";
+import SignupPage from "./SignupPageAndLoginPage";
 import DeleteApi1 from "./DailyPractice";
-
+import GetApi1 from "./DailyPractice";
 // const App=()=>{
 //   return(
 //     <BrowserRouter>
@@ -56,6 +52,6 @@ import DeleteApi1 from "./DailyPractice";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <DeleteApi1/>
+    <GetApi1/>
   </React.StrictMode>
 );
