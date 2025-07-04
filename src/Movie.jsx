@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import "./movie.css";
+//import "./movie.css";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -10,24 +10,24 @@ const Movies = () => {
   useEffect(() => {
     if (serchMovie.trim() === "") {
       setMovies([]);
-      setMsg("Search for a movie...");
+      setMsg("search for a movie");
       return;
     }
 
     fetch(`http://www.omdbapi.com/?s=${serchMovie}&apikey=c8a51988`)
       .then((res) => res.json())
       .then((data) => {
-        if (data.Response === "True") {
+        if (data.Response === "true") {
           setMovies(data.Search);
           setMsg("");
         } else {
           setMovies([]);
-          setMsg("Movie not found.");
+          setMsg("movie not found.");
         }
       })
       .catch((error) => {
         console.error(error);
-        setMsg("Something went wrong.");
+        setMsg(error);
       });
   }, [serchMovie]);
 
@@ -43,15 +43,15 @@ const Movies = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-        <a className="navbar-brand text-white" href="#">
-          🎬 Movie App
+        <a>
+          Movie App
         </a>
 
         <div className="ms-auto d-flex align-items-center">
           <input
             type="text"
             className="form-control me-2"
-            placeholder="Search movies..."
+            
             style={{ width: "200px" }}
             value={serchMovie}
             onChange={handleSearch}

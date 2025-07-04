@@ -27,8 +27,12 @@ import { createRoot } from "react-dom/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import SignupPage from "./SignupPageAndLoginPage";
-import DeleteApi1 from "./DailyPractice";
-import GetApi1 from "./DailyPractice";
+import DeleteApi1 from "./FIndingDay";
+import GetApi1 from "./FIndingDay";
+import OpenApi from "./FIndingDay";
+import Movies from "./Movie";
+import OpenAiApi from "./FIndingDay";
+import FindingDays from "./FIndingDay";
 // const App=()=>{
 //   return(
 //     <BrowserRouter>
@@ -52,6 +56,6 @@ import GetApi1 from "./DailyPractice";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <GetApi1/>
+    <Movies/>
   </React.StrictMode>
 );
