@@ -33,6 +33,8 @@ import OpenApi from "./FIndingDay";
 import Movies from "./Movie";
 import OpenAiApi from "./FIndingDay";
 import FindingDays from "./FIndingDay";
+import PalindromeCheckar from "./PalindromeChecker";
+import PalindromeChecker from "./PalindromeChecker";
 // const App=()=>{
 //   return(
 //     <BrowserRouter>
@@ -56,6 +58,6 @@ import FindingDays from "./FIndingDay";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Movies/>
+    <PalindromeChecker/>
   </React.StrictMode>
 );
