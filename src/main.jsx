@@ -26,15 +26,8 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import SignupPage from "./SignupPageAndLoginPage";
-import DeleteApi1 from "./FIndingDay";
-import GetApi1 from "./FIndingDay";
-import OpenApi from "./FIndingDay";
-import Movies from "./Movie";
-import OpenAiApi from "./FIndingDay";
-import FindingDays from "./FIndingDay";
-import PalindromeCheckar from "./PalindromeChecker";
-import PalindromeChecker from "./PalindromeChecker";
+import CustomCounter from "./CustomCounterIndicator";
+
 // const App=()=>{
 //   return(
 //     <BrowserRouter>
@@ -58,6 +51,6 @@ import PalindromeChecker from "./PalindromeChecker";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <PalindromeChecker/>
+    <CustomCounter/>
   </React.StrictMode>
 );
