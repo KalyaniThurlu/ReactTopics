@@ -1,56 +1,49 @@
-// import React from "react";
-// import { createRoot } from "react-dom/client";
-// // index.js
-// // export const MyContext = createContext();
-
-// // const App = () => {
-// //   const num = [1, 2];
-
-// //   return (
-// //     <MyContext.Provider value={num}>
-// //       <div>
-// //         <h1>This is context API</h1>
-// //         <Cal />
-// //       </div>
-// //     </MyContext.Provider>
-// //   );
-// // };
-
-// createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <Exreducer/>
-//   </React.StrictMode>
-// );
-
 import React from "react";
+
 import { createRoot } from "react-dom/client";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import CustomCounter from "./CustomCounterIndicator";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  Navigate,
+} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import Home from "./routes/Home";
+import Food from "./FoodRecipie";
+import Favorites from "./routes/Favorites";
 
-// const App=()=>{
-//   return(
-//     <BrowserRouter>
-//     <div>
-//       <span><Link to="/home">About</Link></span>
-//       <span><Link to="/about">Home</Link></span>
-//       <span><Link to="contact">Contact</Link></span>
-//     </div>
-//     <div>
-// <Routes>
+const App = () => {
+  return (
+    <BrowserRouter>
+     
+     <div
+  className="d-flex justify-content-end align-items-center p-3"
+  style={{ backgroundColor: "pink", width: "100%", position: "relative" }}
+>
+  <Link to="/home" className="me-3 text-dark text-decoration-none">Home</Link>
+  <Link to="/food" className="me-3 text-dark text-decoration-none">Food</Link>
+  <Link to="/favorites" className="text-dark text-decoration-none">Favorites</Link>
+</div>
 
-//   <Route path="/home" element={<Home/>} />
-//    <Route path="/About" element={<About/>} />
-//    <Route path="/contact" element={<Contact/>} />
-// </Routes>
 
-//     </div>
-//     </BrowserRouter>
-//   )
-// }
 
+      <div className="container mt-4">
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/food" element={<Food/>} />
+          <Route path="/favorites" element={<Favorites/>} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+};
+
+// Render App
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <CustomCounter/>
+    <App />
   </React.StrictMode>
 );
