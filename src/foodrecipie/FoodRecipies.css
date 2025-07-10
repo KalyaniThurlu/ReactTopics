@@ -1,0 +1,34 @@
+
+/* Full background color for page */
+.food-wrapper {
+  min-height: 100vh;
+  
+  padding-bottom: 50px;
+}
+
+/* Container padding */
+.custom-container {
+  padding: 20px;
+}
+
+/* Card styles */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-body {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 15px;
+}
