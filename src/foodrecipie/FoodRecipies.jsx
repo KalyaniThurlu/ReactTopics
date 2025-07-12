@@ -30,9 +30,9 @@ const Food = () => {
 
   return (
     <div className="food-wrapper" >
-      <nav className="" style={{width:"100%",height:"50px",backgroundColor:"purple"}}>
+      <nav>
         <span className="navbar-brand mb-0 h1" 
-        >🍽️ Food Recipe Finder</span>
+        ></span>
       </nav>
 
       <div className="container custom-container">
