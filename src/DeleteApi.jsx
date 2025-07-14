@@ -3,7 +3,7 @@
 
 
 
-// const DeleteApi = () => {
+// const DeleteApi =  () => {
 //     const [id, setId] = useState("")
 //     const [msg, setMsg] = useState("")
 //     const deleteData = () => {

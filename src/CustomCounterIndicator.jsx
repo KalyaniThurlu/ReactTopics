@@ -7,7 +7,6 @@ const CustomCounter = () => {
   const [msg, setMsg] = useState("");
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Fetch products
   useEffect(() => {
     axios.get("https://dummyjson.com/products?limit=100")
       .then((res) => {
@@ -37,15 +36,15 @@ const CustomCounter = () => {
     setScrollProgress(scrolled);
   };
   
-  window.addEventListener("scroll", handleScroll); // ✅ correct event name
+  window.addEventListener("scroll", handleScroll); 
 
-  return () => window.removeEventListener("scroll", handleScroll); // ✅ cleanup
+
 }, []);
 
 
   return (
+    
     <div>
-      {/* Progress bar */}
       <div style={{
         position: "fixed",
         top: 0,

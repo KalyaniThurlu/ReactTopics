@@ -25,6 +25,8 @@
 // A. JSX (JavaScript XML) is a syntax extension for JavaScript that allows writing HTML-like code inside JavaScript. 
 //    It makes React components more readable and easier to write.
    
+
+
 // 6. What are props in react?
 // A. Props (Properties) in React are used to pass data from a parent component to a child component. 
 //    They are read-only and help make components reusable.
@@ -49,6 +51,7 @@
 //   useContext – Accesses context.
 //   useRef – References DOM.
 //   useReducer – Manages complex state.
+
 //   useCallback & useMemo – Optimize performance.
 // 13. What is useState How it will work?
 // A. useState is a React Hook that allows you to manage state in a functional component.
