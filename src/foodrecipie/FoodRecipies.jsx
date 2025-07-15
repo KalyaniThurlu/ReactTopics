@@ -13,7 +13,7 @@ const Food = () => {
     e.preventDefault();
 
     if (!search.trim()) {
-      setMsg("Please enter a food name.");
+      setMsg("Enter a food name.");
       return;
     }
 
@@ -41,7 +41,7 @@ const Food = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button className="btn btn-warning" type="submit">
+        <button type="submit">
           Search
         </button>
       </form>
@@ -49,7 +49,7 @@ const Food = () => {
       <div className="row">
         {items.map((item) => (
           <div key={item.id} className="col-md-4 mb-4">
-            <div className="card h-100 ">
+            <div className="card hight-100 ">
               <img
                 src={item.image_url}
                 className="card-img-top"
@@ -59,7 +59,6 @@ const Food = () => {
                 <h5 className="card-title">{item.title}</h5>
                 <p className="card-text">Publisher: {item.publisher}</p>
                 <button
-                  className="btn btn-success"
                   onClick={() =>
                     addToFavorites({
                       id: item.id || item.recipe_id || Date.now(),
