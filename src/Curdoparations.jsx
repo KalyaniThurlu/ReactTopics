@@ -76,6 +76,8 @@ const Curdoparation1 = () => {
         index === updatedItem ? inputs : item
       );
       setItems(updatedItems);
+
+      
       setUpdatedItem(null);
     } else {
       setItems([...items, inputs]);
