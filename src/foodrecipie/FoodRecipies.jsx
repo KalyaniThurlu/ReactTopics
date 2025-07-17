@@ -12,6 +12,8 @@ const Food = () => {
   const handleSearch = (e) => {
     e.preventDefault();
 
+
+    
     if (!search.trim()) {
       setMsg("Enter a food name.");
       return;
