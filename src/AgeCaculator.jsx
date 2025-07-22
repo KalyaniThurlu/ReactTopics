@@ -15,6 +15,7 @@ const AgeCalculator = () => {
     return (
         <div>
             <input type="text" value={birthYear} onChange={(e) => setBirthYear(e.target.value)} />
+            <h1>This Is Age Calculator</h1>
             <button onClick={ageCalculator}>ageCalculator</button>
             <h1>{age}</h1>
         </div>
