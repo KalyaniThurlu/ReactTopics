@@ -12,8 +12,6 @@ const Food = () => {
   const handleSearch = (e) => {
     e.preventDefault();
 
-
-    
     if (!search.trim()) {
       setMsg("Enter a food name.");
       return;
@@ -44,6 +42,7 @@ const Food = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
         <button type="submit">
+        
           Search
         </button>
       </form>

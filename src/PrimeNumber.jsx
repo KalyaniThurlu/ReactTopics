@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PrimeChecker = () => {
+const PrimeNumberChecker = () => {
   const [num, setNum] = useState("");
   const [msg, setMsg] = useState("");
 
@@ -16,12 +16,12 @@ const PrimeChecker = () => {
 
   return (
     <div>
-      <h3>Prime Checker (Simple Logic)</h3>
+      <h3>Prime Checker</h3>
       <input
         type="text"
         value={num}
         onChange={(e) => setNum(e.target.value)}
-        placeholder="Enter number (2–10)"
+    
       />
       <button onClick={checkPrime}>Check</button>
       <p>{msg}</p>
@@ -29,4 +29,4 @@ const PrimeChecker = () => {
   );
 };
 
-export default PrimeChecker;
+export default PrimeNumberChecker;

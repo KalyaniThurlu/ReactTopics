@@ -25,7 +25,7 @@ rst=n1-n2
 //  const getResults=(operator)=>{
     
 //  switch(operator){
-//     case "+":
+//     case "   ":
 //          rst=n1+n2;
 //          break;
 //         case "-":

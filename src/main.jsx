@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import EditProfile from "./EditProfile";
+import DailyPractice from "./DailyPractice";
 
 
 // import Food from "./foodrecipie/FoodRecipies";
@@ -58,6 +58,6 @@ createRoot(document.getElementById("root")).render(
     {/* <FavoritesProvider>
       <App />
     </FavoritesProvider> */}
-    <EditProfile/>
+    <DailyPractice/>
   </React.StrictMode>
 );

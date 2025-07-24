@@ -26,19 +26,17 @@ const Favorities1 = () => {
                   <div
                     href={item.source_url}
                     target="_blank"
-                   
+
                     className=" me-2"
                   >
                     <button> Read More</button>
-                   <button style={{marginLeft:"10px"}}
-                    onClick={() => removeFromFavorites(item.id)}
-                  >
-                    Remove
-                  </button>
-                   
+                    <button style={{ marginLeft: "10px" }}
+                      onClick={() => removeFromFavorites(item.id)}
+                    >
+                      Remove
+                    </button>
+
                   </div>
-                  
-                  
                 </div>
               </div>
             </div>
