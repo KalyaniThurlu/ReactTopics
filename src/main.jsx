@@ -10,6 +10,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import DailyPractice from "./DailyPractice";
+import StopWatch from "./DailyPractice";
 
 
 // import Food from "./foodrecipie/FoodRecipies";
@@ -58,6 +59,6 @@ createRoot(document.getElementById("root")).render(
     {/* <FavoritesProvider>
       <App />
     </FavoritesProvider> */}
-    <DailyPractice/>
+    <StopWatch/>
   </React.StrictMode>
 );
