@@ -29,28 +29,55 @@ const Food = () => {
       });
   };
 
+  
+  const quickFilter = (meal) => {
+    setSearch(meal);
+    setMsg(`Searching for ${meal} recipes`);
+    axios
+      .get(`https://forkify-api.herokuapp.com/api/v2/recipes?search=${meal}`)
+      .then((res) => {
+        setItems(res.data.data.recipes);
+      })
+      .catch(() => {
+        setMsg("No results");
+        setItems([]);
+      });
+  };
+
   return (
-    <div className="container mt-4">
+    <div>
       <h2>{msg}</h2>
 
-      <form onSubmit={handleSearch} className="d-flex mb-3">
+      <form onSubmit={handleSearch}>
         <input
           type="text"
-          className="form-control me-2"
-          placeholder="Search food"
+    
+          
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button type="submit">
-        
+        <button>
           Search
         </button>
       </form>
 
+
+      <div className="mb-4" style={{marginBottom:"20px"}}>
+        <button  onClick={() => quickFilter("breakfast")}>
+          Breakfast
+        </button>
+        <button onClick={() => quickFilter("lunch")}>
+          Lunch
+        </button>
+        <button  onClick={() => quickFilter("dinner")}>
+          Dinner
+        </button>
+      </div>
+
       <div className="row">
         {items.map((item) => (
           <div key={item.id} className="col-md-4 mb-4">
-            <div className="card hight-100 ">
+            <div className="card h-100">
               <img
                 src={item.image_url}
                 className="card-img-top"
@@ -59,10 +86,13 @@ const Food = () => {
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
                 <p className="card-text">Publisher: {item.publisher}</p>
+                
+                <button onClick={()=>veiwReciepie}> View Recipe</button>
                 <button
+                  
                   onClick={() =>
                     addToFavorites({
-                      id: item.id || item.recipe_id || Date.now(),
+                      id: item.id || Date.now(),
                       title: item.title,
                       publisher: item.publisher,
                       image_url: item.image_url,
@@ -70,7 +100,7 @@ const Food = () => {
                     })
                   }
                 >
-                  Add to Favorites
+                  <i className></i> Favorite
                 </button>
               </div>
             </div>

@@ -1,15 +1,16 @@
 
+import React from "react";
 import { useFavorites } from "./FavoritiesContext";
 
 const Favorities1 = () => {
   const { favorites, removeFromFavorites } = useFavorites();
 
   return (
-    <div className="container mt-4">
-      <h2>My Favorite Recipes</h2>
+    <div>
+     
 
       {favorites.length === 0 ? (
-        <p>No favorites yet.</p>
+        <p>No favorite recipes added yet.</p>
       ) : (
         <div className="row">
           {favorites.map((item) => (
@@ -23,20 +24,20 @@ const Favorities1 = () => {
                 <div className="card-body">
                   <h5 className="card-title">{item.title}</h5>
                   <p className="card-text">Publisher: {item.publisher}</p>
-                  <div
+                  <a
                     href={item.source_url}
+                    className="btn btn-sm btn-outline-primary me-2"
                     target="_blank"
-
-                    className=" me-2"
+                    rel="noopener noreferrer"
                   >
-                    <button> Read More</button>
-                    <button style={{ marginLeft: "10px" }}
-                      onClick={() => removeFromFavorites(item.id)}
-                    >
-                      Remove
-                    </button>
-
-                  </div>
+                    View Recipe
+                  </a>
+                  <button
+                    className="btn btn-sm btn-outline-danger"
+                    onClick={() => removeFromFavorites(item.id)}
+                  >
+                    <i className="bi bi-trash3 me-1"></i> Remove
+                  </button>
                 </div>
               </div>
             </div>
