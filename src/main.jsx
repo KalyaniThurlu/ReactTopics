@@ -8,7 +8,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Home from "../src/portpolio/Home";
 import About from "../src/portpolio/About";
-import Contact from "../src/portpolio/Contact";
+
+import Skills from "../src/portpolio/Skills";
+import Contact from "./portpolio/contact";
+import Projects from "./portpolio/Projects";
 
 const App = () => {
   return (
@@ -25,17 +28,20 @@ const App = () => {
           alignItems: "center",
         }}
       >
-        <span style={{ marginLeft: "75%", padding: "10px" }}>
+        <span style={{ marginLeft: "72%", padding: "10px" }}>
           <Link to="/" style={{ color: "green", textDecoration: "none" }}>Home</Link>
         </span>
         <span style={{ marginLeft: "20px", padding: "10px" }}>
           <Link to="/about" style={{ color: "green", }}>About</Link>
         </span>
         <span style={{ marginLeft: "20px", padding: "10px" }}>
-          <Link to="/contact" style={{ color: "green", textDecoration: "none" }}>Contact</Link>
+          <Link to="/Skills" style={{ color: "green", textDecoration: "none" }}>Skills</Link>
         </span>
          <span style={{ marginLeft: "20px", padding: "10px" }}>
+          <Link to="/Projects" style={{ color: "green", textDecoration: "none" }}>Projects</Link>
+        </span>
           <Link to="/contact" style={{ color: "green", textDecoration: "none" }}>Contact</Link>
+         <span style={{ marginLeft: "20px", padding: "10px" }}>
         </span>
       </nav>
 
@@ -43,7 +49,9 @@ const App = () => {
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/Skills" element={<Skills />} />
+           <Route path="/Contact" element={<Contact />} />
+              <Route path="/projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
   );
