@@ -20,7 +20,7 @@ const App = () => {
         style={{
           width: "100%",
           height: "40%",
-          backgroundColor: "yellow",
+          backgroundColor: "lightblue",
           color: "green",
           padding: "10px",
           display: "flex",
