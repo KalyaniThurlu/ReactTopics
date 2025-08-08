@@ -1,9 +1,9 @@
 
 const Skills = () => {
   const skills = [
-    { name: "html", level: "90" },
-    { name: "css", level: "85" },
-    { name: "javascript", level: "80" },
+    { name: "html", level: "100" },
+    { name: "css", level: "100" },
+    { name: "javascript", level: "100" },
   ];
 
   return (
@@ -24,14 +24,14 @@ const Skills = () => {
               style={{
                 width: `${skill.level}%`,
                 padding: "10px",
-                backgroundColor: "lightblue",
+                backgroundColor: "lightpink",
                 fontSize: "14px",
                 textAlign: "right",
                 borderRadius: "10px",
                 lineHeight: "20px",
               }}
             >
-              {skill.level}%
+            
             </div>
           </div>
         </div>

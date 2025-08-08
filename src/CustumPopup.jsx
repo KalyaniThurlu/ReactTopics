@@ -16,7 +16,6 @@ const CustumPop = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Reset error messages
     setNameError("");
     setPwdError("");
 
@@ -61,7 +60,6 @@ const CustumPop = () => {
             position: "relative",
           }}
         >
-          {/* Close Button */}
           <button
             onClick={closePopup}
             style={{
