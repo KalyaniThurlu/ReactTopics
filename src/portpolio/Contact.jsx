@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-
+import "./Contact.css";
 const Contact = () => {
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
@@ -32,6 +32,7 @@ const Contact = () => {
 
     if (!email.includes("@")) {
       setEmailError("Email must contain '@'");
+      
       valid = false;
     }
 
@@ -95,7 +96,7 @@ const Contact = () => {
           <p style={{ color: "red" }}>{mobileNumberError}</p>
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn">Submit</button>
       </form>
     </div>
   );
