@@ -40,7 +40,8 @@ input:focus {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-/* Error messages */
+
+
 p {
   margin: 5px 0 10px 0;
   font-size: 1rem;

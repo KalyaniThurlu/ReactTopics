@@ -101,7 +101,8 @@
 //   2xx (Success) → Request successful (e.g., 200 OK, 201 Created).
 //   3xx (Redirection) → Further action needed (e.g., 301 Moved Permanently, 304 Not Modified).
 //   4xx (Client Error) → Error from client side (e.g., 400 Bad Request, 401 Unauthorized, 404 Not Found).
-//   5xx (Server Error) → Error from server side (e.g., 500 Internal Server Error, 503 Service Unavailable).
+//
+   5xx (Server Error) → Error from server side (e.g., 500 Internal Server Error, 503 Service Unavailable).
   
 // 24. How to rendar data using map function?
 
