@@ -74,6 +74,9 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Home from "../src/foodDelivery/Home";
 import About from "./foodDelivery/about";
 import Contact from "./foodDelivery/Contact";
+import Blog from "./foodDelivery/Blog";
+import Shop from "./foodDelivery/Shop";
+import OurMenu from "./foodDelivery/OurMenu";
 
 
 
@@ -86,7 +89,7 @@ const App = () => {
           height: "40%",
           backgroundColor: "lightblue",
           color: "green",
-          padding: "10px",
+          padding: "5px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -101,14 +104,28 @@ const App = () => {
           <Link to="/contact" style={{ color: "green", textDecoration: "none" }}>Contact</Link>
          <span style={{ marginLeft: "20px", padding: "10px" }}>
         </span>
+         <Link to="/shop" style={{ color: "green", textDecoration: "none" }}>Shop</Link>
+         <span style={{ marginLeft: "20px", padding: "10px" }}>
+        </span>
+         <Link to="/ourMenu" style={{ color: "green", textDecoration: "none" }}>ourMenu</Link>
+         <span style={{ marginLeft: "20px", padding: "10px" }}>
+        </span>
+         <Link to="/blog" style={{ color: "green", textDecoration: "none" }}>Blog</Link>
+         <span style={{ marginLeft: "20%", padding: "10px" }}>
+        </span>
+        <div>
+          <i className="bi bi-bag">cvbn</i>
+        </div>
       </nav>
 
       <Routes>
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>} />
-      
-           <Route path="/Contact" element={<Contact/>} />
+      <Route path="/blog" element={<Blog/>} />
+      <Route path="/shop" element={<Shop/>} />
+           <Route path="/ourMenu" element={<OurMenu/>} />
+           <Route path="/contact" element={<Contact/>} />
       </Routes>
     </BrowserRouter>
   );
